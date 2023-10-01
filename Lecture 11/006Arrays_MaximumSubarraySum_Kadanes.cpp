@@ -9,6 +9,10 @@ int main() {
 	int arr[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4};
 	int n = sizeof(arr) / sizeof(int);
 
+	// // approach 1
+
+	// // time : n+n ~ O(n) space : O(n)
+
 	// int x[100];
 
 	// x[0] = arr[0];
@@ -26,7 +30,11 @@ int main() {
 
 	// cout << maxSoFar << endl;
 
+	// // approach 2
+
 	// // time : O(n) space : O(n)
+
+	// int x[100];
 
 	// x[0] = arr[0];
 	// int maxSoFar = x[0];
@@ -41,6 +49,7 @@ int main() {
 
 	// cout << maxSoFar << endl;
 
+	// approach 3
 
 	// time : O(n) space : O(1)
 
