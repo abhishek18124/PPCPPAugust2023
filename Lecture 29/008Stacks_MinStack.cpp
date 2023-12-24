@@ -8,31 +8,31 @@ class custom_stack {
 	stack<int> main_stack;
 	stack<int> min_stack;
 
-	public : 
+public :
 
-		void push(int data) {
-			
-		}
+	void push(int data) {
 
-		void pop() {
-			
-		}
+	}
 
-		int size() {
-			
-		}
+	void pop() {
 
-		bool empty() {
-			
-		}
+	}
 
-		int top() {
-			
-		}
+	int size() {
 
-		int minTop() {
-			
-		}
+	}
+
+	bool empty() {
+
+	}
+
+	int top() {
+
+	}
+
+	int minTop() {
+
+	}
 
 };
 

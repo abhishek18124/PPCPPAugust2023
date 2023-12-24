@@ -12,14 +12,14 @@ vector<int> f(int A[], int n) {
 
 	for (int i = n - 1; i >= 0; i--) {
 
-		// find the nearest greater element to the right of A[i]
+		// find the index of the nearest smaller element to the right of A[i]
 
 		while (!s.empty() and A[s.top()] >= A[i]) {
 			s.pop();
 		}
 
 		if (s.empty()) {
-			// there is no greater element to the right of A[i]
+			// there is no smaller element to the right of A[i]
 			v.push_back(n);
 		} else {
 			v.push_back(s.top());
