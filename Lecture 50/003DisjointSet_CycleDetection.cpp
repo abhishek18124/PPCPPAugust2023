@@ -84,8 +84,10 @@ public :
 		}
 		for (edge<T> e : edgeList) {
 			if (ds.findSet(e.u) != ds.findSet(e.v)) {
+				// u and v are in different sets
 				ds.unionSet(e.u, e.v);
 			} else {
+				// u and v are in the same set => there already exists a path b/w u and v therefore u-v is backedge
 				return true;
 			}
 		}

@@ -2,6 +2,7 @@
 #include<unordered_map>
 #include<set>
 #include<vector>
+#include<algorithm>
 
 using namespace std;
 
@@ -58,6 +59,8 @@ public :
 	}
 };
 
+// return true if you want e1 to be ordered before e2
+
 template <typename T>
 bool edgeComparator(edge<T> e1, edge<T> e2) {
 	return e1.w < e2.w;
@@ -91,12 +94,19 @@ public :
 
 		// 3. construct MST
 		vector<edge<T>> mst;
+		int mstSum = 0;
 		for (edge<T> e : edgeList) {
 			if (ds.findSet(e.u) != ds.findSet(e.v)) {
 				ds.unionSet(e.u, e.v);
 				mst.push_back(e);
+				mstSum += e.w;
+				if (mst.size() == vertexSet.size() - 1) {
+					break;
+				}
 			}
 		}
+
+		cout << mstSum << endl;
 
 		return mst;
 	}
